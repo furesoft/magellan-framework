@@ -1,0 +1,6 @@
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Magellan.Tests, PublicKey=00240000048000009400000006020000002400005253413100040000010001005fe3e430ff833e638674a72a16dff12c788f3e81fd5013c1edb5338574b27212c555a2d76b8d1a15391d91d2b47eaffc698466a9d7a129eeb2567f1aad18fcb9844e285041a5b5df59167c541ed7aebe07a173f72b8e498be414a13e30ac1766e3e90c55e1c56b219da5dcfa0c0df9cfca2c0a0bc7eec8ee9474b63a2cb377e2")]
+
+[assembly: AssemblyKeyFile(@"..\Magellan.snk")]

@@ -1,0 +1,39 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+    xmlns:magellan="http://xamlforge.com/magellan" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:iPhone_Controls="clr-namespace:iPhone.Controls" 
+    x:Class="iPhone.Applications.Phone.Views.GroupView" 
+    Style="{DynamicResource Page.LightStyle}"
+    Title="Group"
+    mc:Ignorable="d" d:DesignWidth="334.047" d:DesignHeight="441.313"
+    >
+    <DockPanel>
+    	<iPhone_Controls:PageTitle DockPanel.Dock="Top" ReturnText="Groups" Title="Contacts" HasReturn="True"/>
+        <TextBox Text="{Binding Path=SearchText, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Top" />  
+        <ItemsControl ItemsSource="{Binding VisibleContacts}" Margin="5">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="Transparent" Cursor="Hand">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <magellan:NavigateWithTransitionAction Action="Contact" Controller="Phone" Transition="Forward">
+                                    <magellan:NavigateWithTransitionAction.Parameters>
+                                        <magellan:Parameter ParameterName="contact" Value="{Binding}"/>
+                                    </magellan:NavigateWithTransitionAction.Parameters>
+                                </magellan:NavigateWithTransitionAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <WrapPanel>
+                            <TextBlock Text="{Binding FirstName}" Margin="3" />
+                            <TextBlock Text="{Binding LastName}" FontWeight="Bold" Margin="3" />
+                        </WrapPanel>
+                        
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DockPanel>
+</Page>

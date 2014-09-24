@@ -1,0 +1,53 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    x:Class="Wizard.Views.Shared.Main" 
+    Background="{DynamicResource WindowBackgroundBrush}"
+    FontSize="10pt"
+    mc:Ignorable="d" d:DesignWidth="550" d:DesignHeight="300"
+    >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0"  BorderThickness="0,0,0,1" Padding="10" Background="{DynamicResource NormalBrush}">
+            <!-- This is an easy way to get the title of the current page -->
+            <TextBlock FontSize="20pt" Text="{Binding Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}}" HorizontalAlignment="Left" Width="530" />
+        </Border>
+
+        <Border Grid.Row="1" KeyboardNavigation.TabIndex="1" Background="#FFFFFF" Padding="10">
+            <ZonePlaceHolder Name="MainContent" />
+        </Border>
+
+        <Border Grid.Row="2" DockPanel.Dock="Bottom" BorderThickness="0,1,0,0" Padding="10">
+            <Border.Resources>
+                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+                    <Setter Property="Width" Value="100" />
+                    <Setter Property="Height" Value="25" />
+                </Style>
+            </Border.Resources>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" /> 
+                    <ColumnDefinition Width="*" /> 
+                    <ColumnDefinition Width="Auto" /> 
+                </Grid.ColumnDefinitions>
+                <ZonePlaceHolder Grid.Column="0" Name="BackNavigation">
+                    <Button Content="Back" IsCancel="True" Command="NavigationCommands.BrowseBack" />  
+                </ZonePlaceHolder>
+                <ZonePlaceHolder Grid.Column="2" Name="ForwardNavigation" />
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>

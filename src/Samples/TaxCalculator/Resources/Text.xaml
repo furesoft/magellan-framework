@@ -1,0 +1,14 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    
+    <TextFormattingMode x:Key="Text.DefaultFormattingMode">Display</TextFormattingMode>
+    
+    <Style x:Key="Text.Heading" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18pt" />
+        <Setter Property="FontFamily" Value="Trebuchet MS" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    
+</ResourceDictionary>

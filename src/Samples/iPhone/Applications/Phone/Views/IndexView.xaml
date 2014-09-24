@@ -1,0 +1,21 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:Views="clr-namespace:Magellan.Views;assembly=Magellan" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    x:Class="iPhone.Applications.Phone.Views.IndexView" 
+    Title="Phone"
+    Style="{DynamicResource Page.EmptyStyle}"
+    mc:Ignorable="d" d:DesignWidth="287.397" d:DesignHeight="425.96"
+    >
+    <Grid>
+        <TabControl Margin="-1">
+            <TabItem Header="Contacts">
+                <Frame x:Name="ContactsFrame" Style="{DynamicResource Frame.WhiteStyle}"/>
+            </TabItem>
+            <TabItem Header="Keypad">
+                <Frame x:Name="KeypadFrame" Style="{DynamicResource Frame.WhiteStyle}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

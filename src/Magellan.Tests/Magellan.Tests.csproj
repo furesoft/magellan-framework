@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19D7B5E8-146A-4F08-B70E-26B1910FB677}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Magellan.Tests</RootNamespace>
+    <AssemblyName>Magellan.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ExpressionBlendVersion>4.0.20408.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Moq, Version=4.2.1409.1722, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Interactivity\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Transitionals, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4747a3d6bcb35c80, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Transitionals\Transitionals.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Framework\BusyStateTests.cs" />
+    <Compile Include="Framework\ControllerRouteValidatorTests.cs" />
+    <Compile Include="Framework\DefaultViewNamingConventionTests.cs" />
+    <Compile Include="Framework\ViewModelRouteValidatorTests.cs" />
+    <Compile Include="Integration\ContentBasedNavigationIntegrationTests.cs" />
+    <Compile Include="NavigatorExtensionsTests.cs" />
+    <Compile Include="Framework\AsyncActionInvokerTests.cs" />
+    <Compile Include="Framework\AsyncControllerTests.cs" />
+    <Compile Include="Framework\BackResultTests.cs" />
+    <Compile Include="Framework\SetTests.cs" />
+    <Compile Include="Framework\ControllerFactoryTests.cs" />
+    <Compile Include="Framework\ControllerTests.cs" />
+    <Compile Include="Framework\AsyncControllerFactoryTests.cs" />
+    <Compile Include="Framework\DialogResultTests.cs" />
+    <Compile Include="Framework\FrameworkElementViewEngineResultTest.cs" />
+    <Compile Include="Framework\PageResultTests.cs" />
+    <Compile Include="Framework\PageViewEngineResultTests.cs" />
+    <Compile Include="Framework\PageViewEngineTests.cs" />
+    <Compile Include="Framework\RedirectResultTests.cs" />
+    <Compile Include="Framework\ResultFilterTests.cs" />
+    <Compile Include="Framework\StartProcessResult.cs" />
+    <Compile Include="Framework\ViewEngineCollectionTests.cs" />
+    <Compile Include="Framework\DefaultActionInvokerTests.cs" />
+    <Compile Include="Framework\DefaultModelBinderTests.cs" />
+    <Compile Include="Framework\DefaultViewActivatorTests.cs" />
+    <Compile Include="Framework\ModelBinderDictionaryTests.cs" />
+    <Compile Include="Framework\ParameterValueDictionaryTests.cs" />
+    <Compile Include="Framework\ViewEngineTestBase.cs" />
+    <Compile Include="Framework\ViewResultTests.cs" />
+    <Compile Include="Framework\WindowResultTests.cs" />
+    <Compile Include="Framework\WindowViewEngineResultTests.cs" />
+    <Compile Include="Framework\ReflectionBasedViewEngineTests.cs" />
+    <Compile Include="Framework\WindowViewEngineTests.cs" />
+    <Compile Include="Helpers\ControllerExtensions.cs" />
+    <Compile Include="Helpers\RequestBuilder.cs" />
+    <Compile Include="Helpers\RouteCollectionExtensions.cs" />
+    <Compile Include="Helpers\RouteMatchExtensions.cs" />
+    <Compile Include="Helpers\TestRouteCatalog.cs" />
+    <Compile Include="Helpers\TestRouteHandler.cs" />
+    <Compile Include="Helpers\TestWindow.cs" />
+    <Compile Include="Helpers\TypeGeneration\DelegatedImplementation.cs" />
+    <Compile Include="Helpers\TypeGeneration\DynamicAssemblyBuilder.cs" />
+    <Compile Include="Helpers\TypeGeneration\IImplementation.cs" />
+    <Compile Include="Helpers\TypeGeneration\ITypeContributor.cs" />
+    <Compile Include="Helpers\TypeGeneration\MethodContributor.cs" />
+    <Compile Include="Helpers\TypeGeneration\TypeBuilder.cs" />
+    <Compile Include="Helpers\UIElementExtensions.cs" />
+    <Compile Include="Helpers\UITestBase.cs" />
+    <Compile Include="Behaviors\NavigateBehaviorTests.cs" />
+    <Compile Include="Integration\FrameBasedNavigationIntegrationTests.cs" />
+    <Compile Include="Integration\NavigationServiceWrapper.cs" />
+    <Compile Include="Integration\TransitionsIntegrationTest.cs" />
+    <Compile Include="NavigatorFactoryTests.cs" />
+    <Compile Include="NavigatorTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\SignInfo.cs" />
+    <Compile Include="Routing\CatchAllParameterSegmentTests.cs" />
+    <Compile Include="Routing\LiteralSegmentRecognizerTests.cs" />
+    <Compile Include="Routing\LiteralSegmentTests.cs" />
+    <Compile Include="Routing\ParameterSegmentRecognizerTests.cs" />
+    <Compile Include="Routing\ParameterSegmentTests.cs" />
+    <Compile Include="Routing\PathIteratorTests.cs" />
+    <Compile Include="Routing\PathSplitterTests.cs" />
+    <Compile Include="Routing\RegexConstraintTests.cs" />
+    <Compile Include="Routing\RouteTests.cs" />
+    <Compile Include="Routing\RouteValidatorTests.cs" />
+    <Compile Include="Routing\RoutingBehavior.cs" />
+    <Compile Include="Utilities\AmazingConverterTests.cs" />
+    <Compile Include="Utilities\GuardTests.cs" />
+    <Compile Include="Utilities\PropertyValueListerTests.cs" />
+    <Compile Include="Utilities\UIElementExtensionsTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Magellan.Behaviors\Magellan.Behaviors.csproj">
+      <Project>{14620616-8CD2-4B10-81F7-1E0EAD136659}</Project>
+      <Name>Magellan.Behaviors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Magellan.Composite\Magellan.Composite.csproj">
+      <Project>{2C8E481F-C694-4221-8F69-5EE7F77A5FEB}</Project>
+      <Name>Magellan.Composite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Magellan.Testability\Magellan.Testability.csproj">
+      <Project>{FB529B00-89B5-4744-9EAC-DCD57A336C6D}</Project>
+      <Name>Magellan.Testability</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Magellan.Transitionals\Magellan.Transitionals.csproj">
+      <Project>{55AE7230-4545-4B10-BAD2-B8E93305992C}</Project>
+      <Name>Magellan.Transitionals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Magellan\Magellan.csproj">
+      <Project>{AF447A33-1348-480A-B98E-CB0DC11893F5}</Project>
+      <Name>Magellan</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

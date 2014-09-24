@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Magellan.5f0d333f-db96-4156-876b-f31b7c70d8ca">
+    <Name>Magellan</Name>
+    <Author>Magellan</Author>
+    <Version>2.0.0</Version>
+    <Description xml:space="preserve">Magellan is a routing and MVC framework for WPF, inspired by ASP.NET MVC. This extension contains project templates that let you create Magellan applications quickly. Nothing is installed to the GAC.</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>http://code.google.com/p/magellan-framework</MoreInfoUrl>
+    <License>License.rtf</License>
+    <GettingStartedGuide>http://code.google.com/p/magellan-framework</GettingStartedGuide>
+    <Icon>Magellan.ico</Icon>
+    <PreviewImage>Magellan.png</PreviewImage>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VCSExpress</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References />
+  <Content>
+    <ProjectTemplate>ProjectTemplates</ProjectTemplate>
+  </Content>
+</Vsix>

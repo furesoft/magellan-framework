@@ -1,0 +1,67 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" 
+%><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="/Views/Shared/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+        function onSilverlightError(sender, args) {
+            var appSource = "";
+            if (sender != null && sender != 0) {
+              appSource = sender.getHost().Source;
+            }
+            
+            var errorType = args.ErrorType;
+            var iErrorCode = args.ErrorCode;
+
+            if (errorType == "ImageError" || errorType == "MediaError") {
+              return;
+            }
+
+            var errMsg = "Unhandled Error in Silverlight Application " +  appSource + "\n" ;
+
+            errMsg += "Code: "+ iErrorCode + "    \n";
+            errMsg += "Category: " + errorType + "       \n";
+            errMsg += "Message: " + args.ErrorMessage + "     \n";
+
+            if (errorType == "ParserError") {
+                errMsg += "File: " + args.xamlFile + "     \n";
+                errMsg += "Line: " + args.lineNumber + "     \n";
+                errMsg += "Position: " + args.charPosition + "     \n";
+            }
+            else if (errorType == "RuntimeError") {           
+                if (args.lineNumber != 0) {
+                    errMsg += "Line: " + args.lineNumber + "     \n";
+                    errMsg += "Position: " +  args.charPosition + "     \n";
+                }
+                errMsg += "MethodName: " + args.methodName + "     \n";
+            }
+
+            throw new Error(errMsg);
+        }
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <a class="logo" href="/" title="Magellan Silverlight Samples">Magellan Silverlight Samples</a>
+  </div>
+  <div class="nav">
+    <ul>
+      <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
+      <li><%= Html.ActionLink("Quickstart", "Quickstart", "Home") %></li>
+    </ul>
+  </div>
+  <div class="body">
+    <div class="content">
+      <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+  </div>
+  <div class="footer">
+    This is part of a series of demonstrations on Magellan's Silverlight support.
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="iPhone.Applications.Home.Views.HomeView" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:iPhone_Controls="clr-namespace:iPhone.Controls" x:Name="pageView" 
+    xmlns:magellan="http://xamlforge.com/magellan" 
+    mc:Ignorable="d" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+    Title="Main"
+    Style="{DynamicResource Page.DarkStyle}" d:DesignWidth="253.293" d:DesignHeight="335.96"
+    >
+	<DockPanel>
+		<Border DockPanel.Dock="Bottom" BorderThickness="1"/>
+		<Border BorderThickness="1">
+			<UniformGrid Columns="4" Rows="4">
+				<iPhone_Controls:ImageButton Content="Phone" Image="/iPhone;Component/Resources/Images/Phone-48x48.png">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <magellan:NavigateWithTransitionAction Action="Index" Controller="Phone" Transition="ZoomIn" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+				</iPhone_Controls:ImageButton>
+
+                <iPhone_Controls:ImageButton Content="Mail" Image="/iPhone;Component/Resources/Images/Mail-48x48.png">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <magellan:NavigateWithTransitionAction Action="Index" Controller="Mail" Transition="ZoomIn" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </iPhone_Controls:ImageButton>
+
+                <iPhone_Controls:ImageButton Content="Settings" Image="/iPhone;Component/Resources/Images/Settings-48x48.png">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <magellan:NavigateWithTransitionAction Action="Index" Controller="Settings" Transition="ZoomIn" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </iPhone_Controls:ImageButton>
+            </UniformGrid>
+		</Border>
+	</DockPanel>
+</Page>
+
+    

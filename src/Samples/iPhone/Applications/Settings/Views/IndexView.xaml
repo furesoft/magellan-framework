@@ -1,0 +1,12 @@
+﻿<Page 
+    x:Class="iPhone.Applications.Settings.Views.IndexView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Views="clr-namespace:Magellan.Views;assembly=Magellan" xmlns:Controls="clr-namespace:iPhone.Controls" Title="IndexView"
+    Style="{DynamicResource Page.EmptyStyle}"
+    >
+    <DockPanel>
+        <Controls:PageTitle DockPanel.Dock="Top" Title="Settings" />
+        
+        <TextBlock Text="Settings" FontSize="36pt" HorizontalAlignment="Center" VerticalAlignment="Center"  /> 
+    </DockPanel>
+</Page>

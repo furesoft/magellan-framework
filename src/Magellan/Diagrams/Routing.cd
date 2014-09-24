@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Magellan.Routing.CatchAllParameterSegment" Collapsed="true">
+    <Position X="9.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAQAAAAAAAAAAAAAAAAJAABAAAAAAAEAA=</HashCode>
+      <FileName>Routing\CatchAllParameterSegment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.CatchAllParameterSegmentRecognizer" Collapsed="true">
+    <Position X="11.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\CatchAllParameterSegmentRecognizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.ControllerRouteHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Routing\ControllerRouteHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magellan.Routing.DefaultRouteValidator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\DefaultRouteValidator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magellan.Routing.LiteralSegment" Collapsed="true">
+    <Position X="14" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Routing\LiteralSegment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.LiteralSegmentRecognizer" Collapsed="true">
+    <Position X="9.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\LiteralSegmentRecognizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.NavigationRequest">
+    <Position X="8.25" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABEACMAYEAEAAAAACAAAAAEAAAgAAAAAAAAE=</HashCode>
+      <FileName>Routing\NavigationRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RouteValues" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Magellan.Routing.ParameterSegment">
+    <Position X="11.75" Y="12" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAQAAAAAAAAAAAAAAAAJAABAAAAAAAEAA=</HashCode>
+      <FileName>Routing\ParameterSegment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_constraint" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Magellan.Routing.ParameterSegmentRecognizer" Collapsed="true">
+    <Position X="14" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\ParameterSegmentRecognizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.ParsedRoute">
+    <Position X="7.5" Y="10.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAACAAAAAAAAAAAAQAIAA=</HashCode>
+      <FileName>Routing\ParsedRoute.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Segments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Magellan.Routing.RegexBasedSegmentRecognizer" Collapsed="true">
+    <Position X="11.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Routing\RegexBasedSegmentRecognizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.RegexConstraint" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Routing\RegexConstraint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magellan.Routing.Route" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEkAAAAAAAAQBBEAAAIAAAAAAEAABACgASAAAAAIAA=</HashCode>
+      <FileName>Routing\Route.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parser" />
+      <Property Name="Validator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magellan.Routing.RouteCollection">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACACABAAAAAAAAAAAABAAAAAAAAAAAAKAA=</HashCode>
+      <FileName>Routing\RouteCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_routes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Magellan.Routing.RouteParser" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Routing\RouteParser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Recognizers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magellan.Routing.RouteValueDictionary" Collapsed="true">
+    <Position X="11.75" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\RouteValueDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.Segment" Collapsed="true">
+    <Position X="11.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Routing\Segment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.Routing.SegmentRecognizer" Collapsed="true">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Routing\SegmentRecognizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Magellan.Routing.IRoute" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQABAAAAAAAAAAAAAAAAAAAQAAAAAIAA=</HashCode>
+      <FileName>Routing\IRoute.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Magellan.Routing.IRouteConstraint" Collapsed="true">
+    <Position X="11.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\IRouteConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Magellan.Routing.IRouteHandler">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\IRouteHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Magellan.Routing.IRouteParser" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\IRouteParser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Magellan.Routing.IRouteValidator" Collapsed="true">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Routing\IRouteValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

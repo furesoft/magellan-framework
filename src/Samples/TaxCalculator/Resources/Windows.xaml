@@ -1,0 +1,17 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    
+    <Style x:Key="Window.Normal" TargetType="Window">
+        <Setter Property="TextOptions.TextFormattingMode" Value="{DynamicResource Text.FormattingMode}" />
+        <Setter Property="Icon" Value="/Resources/Icons/Icon.ico" />
+        <Setter Property="FontSize" Value="10pt" />
+    </Style>
+
+    <Style x:Key="Window.Dialog" TargetType="Window" BasedOn="{StaticResource Window.Normal}">
+        <Setter Property="TextOptions.TextFormattingMode" Value="{DynamicResource Text.FormattingMode}" />
+        <Setter Property="ResizeMode" Value="NoResize" />
+    </Style>
+
+</ResourceDictionary>

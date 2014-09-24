@@ -1,0 +1,40 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    x:Class="Wizard.Views.Wizard.AccountDetailsPage" 
+	xmlns:magellan="http://xamlforge.com/magellan"
+    Title="Account Details"
+    mc:Ignorable="d" d:DesignWidth="710" d:DesignHeight="300"
+    TextOptions.TextFormattingMode="Display"
+    >
+    <Layout>
+        <Zone ZonePlaceHolderName="MainContent">
+            <StackPanel Margin="0,0,0,3">
+                <Label Margin="0,3,0,6" Content="Please enter your account details below:" />
+                <Form>
+                    <Field For="{Binding FullName}" />
+                    <Field For="{Binding EmailAddress}" />
+                    <Field For="{Binding Password}">
+                        <PasswordBox Width="150" />
+                    </Field>
+                </Form> 
+            </StackPanel>
+        </Zone>
+
+        <Zone ZonePlaceHolderName="ForwardNavigation">
+            <Button Content="Next" IsDefault="True">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <NavigateControllerAction Controller="Wizard" Action="SelectServerType">
+                            <NavigateControllerAction.Parameters>
+                                <Parameter ParameterName="wizardState" Value="{Binding}" />
+                            </NavigateControllerAction.Parameters>
+                        </NavigateControllerAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+        </Zone>
+    </Layout>
+</Page>

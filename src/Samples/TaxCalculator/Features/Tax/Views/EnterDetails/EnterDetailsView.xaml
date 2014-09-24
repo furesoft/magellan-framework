@@ -1,0 +1,27 @@
+﻿<Page 
+    x:Class="TaxCalculator.Features.Tax.Views.EnterDetails.EnterDetailsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+    d:DesignHeight="391" d:DesignWidth="728"
+	Title="Home"
+    Style="{DynamicResource Page.Normal}"
+    >
+    <Layout>
+        <Zone ZonePlaceHolderName="ContentZone">
+            <StackPanel Margin="7">
+                <TextBlock Margin="7" Text="Enter your tax details" Style="{DynamicResource Text.Heading}" />
+
+                <Form>
+                    <Field Margin="7" For="{Binding Path=GrossIncome}" />
+                    <Field Margin="7" For="{Binding Path=Period}" Description="Select the financial year in which the income was earned." />
+                    <Field Margin="7">
+                        <Button Command="{Binding Path=Submit}" Content="Submit" HorizontalAlignment="Left" Width="100" />
+                    </Field>
+                </Form>
+            </StackPanel>
+        </Zone>
+    </Layout>
+</Page>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Controllers are the prime object in Magellan. Most of the controller execution lives in ControllerBase, which defers to ActionInvoker to execute the request. The Controller base class simply extends ControllerBase to add a number of convenience methods. Action Invokers also use model binders and action filters during the execution. ">
+    <Position X="0.781" Y="0.5" Height="0.792" Width="5.908" />
+  </Comment>
+  <Class Name="Magellan.ActionInvoker" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAAAAAAAAAAABAQAAEAAAABABAQACA=</HashCode>
+      <FileName>Framework\ActionInvoker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magellan.Controller" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAQAAQAAAAAAAAABAAAAAAAAAAEAABCAAAAAA=</HashCode>
+      <FileName>Framework\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Magellan.ControllerBase" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAJAAAAAAAAAAUAQAAgIAAAAAAAgAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Framework\ControllerBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_actionInvoker" />
+      <Field Name="_modelBinders" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Magellan.ModelBinderDictionary" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAABAAAAAAAAwAAAFQAAA=</HashCode>
+      <FileName>Framework\ModelBinderDictionary.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_binders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Magellan.DefaultActionInvoker" Collapsed="true">
+    <Position X="7.25" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAABAAAAAAAAABAAgAAAA=</HashCode>
+      <FileName>Framework\DefaultActionInvoker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Magellan.IActionInvoker" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Framework\IActionInvoker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Magellan.IModelBinder" Collapsed="true">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\IModelBinder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

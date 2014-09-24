@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF447A33-1348-480A-B98E-CB0DC11893F5}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Magellan</RootNamespace>
+    <AssemblyName>Magellan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ExpressionBlendVersion>4.0.20408.0</ExpressionBlendVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Magellan.XML</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Magellan.XML</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\Magellan.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstractions\ContentNavigationServiceWrapper.cs" />
+    <Compile Include="Abstractions\DispatcherWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\IDispatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\INavigationService.cs" />
+    <Compile Include="Abstractions\FrameNavigationServiceWrapper.cs" />
+    <Compile Include="Abstractions\NavigationServiceDecorator.cs" />
+    <Compile Include="ComponentModel\EnumDisplayName.cs" />
+    <Compile Include="ControllerRouteCatalog.cs" />
+    <Compile Include="Controls\NavigationFrame.cs" />
+    <Compile Include="Events\BeginRequestNavigationEvent.cs" />
+    <Compile Include="Events\CompleteNavigationEvent.cs" />
+    <Compile Include="Events\ExecutingActionNavigationEvent.cs" />
+    <Compile Include="Events\ExecutingResultNavigationEvent.cs" />
+    <Compile Include="Events\INavigationEvent.cs" />
+    <Compile Include="Events\PostActionFiltersNavigationEvent.cs" />
+    <Compile Include="Events\PostResultFiltersNavigationEvent.cs" />
+    <Compile Include="Events\PreActionFiltersNavigationEvent.cs" />
+    <Compile Include="Events\PreResultFiltersNavigationEvent.cs" />
+    <Compile Include="Events\ResolvingActionNavigationEvent.cs" />
+    <Compile Include="Events\ResolvingControllerNavigationEvent.cs" />
+    <Compile Include="Events\RoutingEvents.cs" />
+    <Compile Include="Exceptions\ModelBindingException.cs" />
+    <Compile Include="Exceptions\ViewNotSupportedException.cs" />
+    <Compile Include="Exceptions\ImpossibleNavigationRequestException.cs" />
+    <Compile Include="Exceptions\NavigationConfigurationException.cs" />
+    <Compile Include="ComponentModel\SetDebuggerView.cs" />
+    <Compile Include="Controls\Conventions\Editors\CheckBoxEditorStrategy.cs" />
+    <Compile Include="Controls\Conventions\Editors\ComboBoxEditorStrategy.cs" />
+    <Compile Include="Controls\Conventions\Editors\EditorStrategyCollection.cs" />
+    <Compile Include="Controls\Conventions\Editors\EditorStrategies.cs" />
+    <Compile Include="Controls\Conventions\Editors\IEditorStrategy.cs" />
+    <Compile Include="Controls\Conventions\Editors\TextBoxEditorStrategy.cs" />
+    <Compile Include="Controls\Conventions\IFieldConvention.cs" />
+    <Compile Include="Controls\Conventions\FieldContext.cs" />
+    <Compile Include="Controls\Field.cs" />
+    <Compile Include="Controls\Conventions\FieldInferenceRule.cs" />
+    <Compile Include="Controls\Conventions\FieldConvention.cs" />
+    <Compile Include="Controls\Conventions\FieldInferrer.cs" />
+    <Compile Include="Controls\Form.cs" />
+    <Compile Include="Controls\Layout.cs" />
+    <Compile Include="Controls\Zone.cs" />
+    <Compile Include="Controls\ZoneCollection.cs" />
+    <Compile Include="Controls\ZonePlaceHolder.cs" />
+    <Compile Include="Framework\ActionExecutedContext.cs" />
+    <Compile Include="Framework\ActionExecutingContext.cs" />
+    <Compile Include="Framework\ActionInvoker.cs" />
+    <Compile Include="Exceptions\ActionNotFoundException.cs" />
+    <Compile Include="Framework\ActionResult.cs" />
+    <Compile Include="Framework\AsyncActionInvoker.cs" />
+    <Compile Include="Framework\AsyncController.cs" />
+    <Compile Include="Exceptions\AsyncControllerExecutionException.cs" />
+    <Compile Include="Framework\AsyncControllerFactory.cs" />
+    <Compile Include="Framework\BackgroundOperationCollection.cs" />
+    <Compile Include="Framework\BackgroundOperationException.cs" />
+    <Compile Include="Framework\BackResult.cs" />
+    <Compile Include="ComponentModel\DispatchedObservableCollection.cs" />
+    <Compile Include="Framework\DoNothingResult.cs" />
+    <Compile Include="Framework\CommonViewResultOptions.cs" />
+    <Compile Include="Framework\Controller.cs" />
+    <Compile Include="Framework\ControllerBase.cs" />
+    <Compile Include="Framework\ControllerContext.cs" />
+    <Compile Include="Framework\ControllerFactory.cs" />
+    <Compile Include="Framework\ControllerFactoryResult.cs" />
+    <Compile Include="Framework\DefaultActionInvoker.cs" />
+    <Compile Include="Framework\DefaultModelBinder.cs" />
+    <Compile Include="Framework\DefaultViewActivator.cs" />
+    <Compile Include="Framework\DefaultViewNamespaceConvention.cs" />
+    <Compile Include="Framework\DefaultViewNamingConvention.cs" />
+    <Compile Include="Framework\DelegateActionDescriptor.cs" />
+    <Compile Include="Framework\DialogResult.cs" />
+    <Compile Include="Framework\Flash.cs" />
+    <Compile Include="Framework\FlashCollection.cs" />
+    <Compile Include="Framework\FrameworkElementViewEngineResult.cs" />
+    <Compile Include="Framework\IActionDescriptor.cs" />
+    <Compile Include="Framework\IActionFilter.cs" />
+    <Compile Include="Framework\IActionInvoker.cs" />
+    <Compile Include="Framework\IController.cs" />
+    <Compile Include="Framework\IControllerFactory.cs" />
+    <Compile Include="Framework\IFlasher.cs" />
+    <Compile Include="Framework\IModelBinder.cs" />
+    <Compile Include="Framework\IOperation.cs" />
+    <Compile Include="Framework\IResultFilter.cs" />
+    <Compile Include="Framework\IScheduler.cs" />
+    <Compile Include="Framework\IStoreValidationMessages.cs" />
+    <Compile Include="Framework\ITimer.cs" />
+    <Compile Include="Framework\IViewActivator.cs" />
+    <Compile Include="Framework\IViewEngine.cs" />
+    <Compile Include="Framework\IViewInitializer.cs" />
+    <Compile Include="Framework\DefaultViewInitializer.cs" />
+    <Compile Include="Framework\IViewNamespaceConvention.cs" />
+    <Compile Include="Framework\IViewNamingConvention.cs" />
+    <Compile Include="Framework\ModelBinderDictionary.cs" />
+    <Compile Include="Framework\ModelBinders.cs" />
+    <Compile Include="Framework\ModelBindingContext.cs" />
+    <Compile Include="Framework\PageResult.cs" />
+    <Compile Include="Framework\PageViewEngine.cs" />
+    <Compile Include="Framework\PageViewEngineResult.cs" />
+    <Compile Include="Framework\RedirectResult.cs" />
+    <Compile Include="Framework\ReflectionBasedViewEngine.cs" />
+    <Compile Include="Framework\BusyState.cs" />
+    <Compile Include="Framework\IViewLifecycle.cs" />
+    <Compile Include="Framework\IViewModelFactory.cs" />
+    <Compile Include="Framework\PresentationObject.cs" />
+    <Compile Include="Framework\Scheduler.cs" />
+    <Compile Include="Framework\TimerImplementation.cs" />
+    <Compile Include="Framework\ValidationMessageCollection.cs" />
+    <Compile Include="Framework\ValidationMessageDictionary.cs" />
+    <Compile Include="Framework\ViewModelFactoryResult.cs" />
+    <Compile Include="Framework\RelayCommand.cs" />
+    <Compile Include="Framework\ResultExecutedContext.cs" />
+    <Compile Include="Framework\ResultExecutingContext.cs" />
+    <Compile Include="Framework\StartProcessResult.cs" />
+    <Compile Include="Framework\ViewEngineCollection.cs" />
+    <Compile Include="Framework\ViewEngineResult.cs" />
+    <Compile Include="Framework\ViewEngines.cs" />
+    <Compile Include="Exceptions\ViewNotFoundException.cs" />
+    <Compile Include="Framework\ViewResult.cs" />
+    <Compile Include="Framework\ViewResultOptions.cs" />
+    <Compile Include="Framework\WindowResult.cs" />
+    <Compile Include="Framework\WindowViewEngine.cs" />
+    <Compile Include="Framework\WindowViewEngineResult.cs" />
+    <Compile Include="Framework\ViewModelFactory.cs" />
+    <Compile Include="Framework\ViewModelRouteHandler.cs" />
+    <Compile Include="Framework\ViewModelRouteValidator.cs" />
+    <Compile Include="Framework\ViewModel.cs" />
+    <Compile Include="Progress\NavigationProgressListenerCollection.cs" />
+    <Compile Include="INavigator.cs" />
+    <Compile Include="Navigator.cs" />
+    <Compile Include="INavigatorFactory.cs" />
+    <Compile Include="Diagnostics\TraceExtensions.cs" />
+    <Compile Include="Diagnostics\TraceSources.cs" />
+    <Compile Include="INavigationAware.cs" />
+    <Compile Include="Progress\INavigationProgressListener.cs" />
+    <Compile Include="Events\NavigationStage.cs" />
+    <Compile Include="ComponentModel\Set.cs" />
+    <Compile Include="ComponentModel\ValueDictionary.cs" />
+    <Compile Include="Exceptions\NavigationException.cs" />
+    <Compile Include="NavigatorExtensions.cs" />
+    <Compile Include="NavigatorFactory.cs" />
+    <Compile Include="Properties\SignInfo.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="NavigationRequest.cs" />
+    <Compile Include="Routing\CatchAllParameterSegment.cs" />
+    <Compile Include="Routing\CatchAllParameterSegmentRecognizer.cs" />
+    <Compile Include="Framework\ControllerRouteHandler.cs" />
+    <Compile Include="Framework\ControllerRouteValidator.cs" />
+    <Compile Include="Routing\RouteValidator.cs" />
+    <Compile Include="Exceptions\InvalidRouteException.cs" />
+    <Compile Include="Routing\IRoute.cs" />
+    <Compile Include="Routing\IRouteConstraint.cs" />
+    <Compile Include="Routing\IRouteHandler.cs" />
+    <Compile Include="Routing\IRouteParser.cs" />
+    <Compile Include="Routing\IRouteResolver.cs" />
+    <Compile Include="Routing\IRouteValidator.cs" />
+    <Compile Include="Routing\LiteralSegment.cs" />
+    <Compile Include="Routing\LiteralSegmentRecognizer.cs" />
+    <Compile Include="Routing\ResolvedNavigationRequest.cs" />
+    <Compile Include="Routing\ParameterSegment.cs" />
+    <Compile Include="Routing\ParameterSegmentRecognizer.cs" />
+    <Compile Include="Routing\ParsedRoute.cs" />
+    <Compile Include="Routing\PathIterator.cs" />
+    <Compile Include="Routing\PathMatch.cs" />
+    <Compile Include="Routing\PathSplitter.cs" />
+    <Compile Include="Routing\QueryValueCollection.cs" />
+    <Compile Include="Routing\QueryValueCollectionDebuggerView.cs" />
+    <Compile Include="Routing\RegexBasedSegmentRecognizer.cs" />
+    <Compile Include="Routing\RegexConstraint.cs" />
+    <Compile Include="Routing\Route.cs" />
+    <Compile Include="Routing\RouteCatalog.cs" />
+    <Compile Include="Routing\RouteMatch.cs" />
+    <Compile Include="Routing\RouteParser.cs" />
+    <Compile Include="Routing\RouteResolver.cs" />
+    <Compile Include="Routing\RouteValidationResult.cs" />
+    <Compile Include="Routing\RouteValueBag.cs" />
+    <Compile Include="Routing\RouteValueDictionary.cs" />
+    <Compile Include="Routing\Segment.cs" />
+    <Compile Include="Routing\SegmentPathMatch.cs" />
+    <Compile Include="Routing\SegmentRecognizer.cs" />
+    <Compile Include="Routing\SegmentValueMatch.cs" />
+    <Compile Include="Exceptions\UnroutableRequestException.cs" />
+    <Compile Include="Exceptions\UnsupportedConstraintException.cs" />
+    <Compile Include="Routing\UrlParameter.cs" />
+    <Compile Include="Utilities\AmazingConverter.cs" />
+    <Compile Include="Utilities\DelegateInvoker.cs" />
+    <Compile Include="Utilities\BindingExtensions.cs" />
+    <Compile Include="Utilities\EnumerableExtensions.cs" />
+    <Compile Include="Utilities\StringExtensions.cs" />
+    <Compile Include="Utilities\UIElementExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\Guard.cs" />
+    <Compile Include="Utilities\PropertyValueLister.cs" />
+    <Compile Include="ViewModelRouteCatalog.cs" />
+    <Compile Include="Views\IModelBound.cs" />
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Views\NavigationProperties.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Magellan.snk">
+      <Link>Properties\Magellan.snk</Link>
+    </None>
+    <None Include="Diagrams\Controllers.cd" />
+    <None Include="Diagrams\Exceptions.cd" />
+    <None Include="Diagrams\Routing.cd" />
+    <None Include="Diagrams\View Engines.cd" />
+    <None Include="Diagrams\Action Results.cd" />
+    <None Include="Properties\Magellan.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

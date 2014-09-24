@@ -1,0 +1,28 @@
+﻿<Window 
+    x:Class="iPhone.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:iPhone.Controls" Title="iPhone" Height="415" Width="268"
+    WindowStartupLocation="CenterScreen"
+    ResizeMode="NoResize"
+    Icon="Properties\Icon.ico" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+    FontFamily="Tahoma"
+    >
+    <Border MouseDown="BeginMove" Style="{DynamicResource Border.iPhoneOuterBorderStyle}">
+		<DockPanel Margin="5">
+            <Border DockPanel.Dock="Top">
+				<Button Content="Exit" HorizontalAlignment="Right" Click="CloseWindow" Margin="5" Style="{DynamicResource Button.ExitButtonStyle}" />
+			</Border>
+        
+			<Border DockPanel.Dock="Bottom" Margin="0" >
+                <Button Style="{DynamicResource Button.HomeButtonStyle}" Content="Home" Click="HomeButtonClicked" />
+            </Border>
+        
+			<Border>
+                <Grid>
+                    <Frame x:Name="Frame" Margin="5" Style="{DynamicResource Frame.MainStyle}" />
+                    <Controls:BusyIndicator x:Name="BusyIndicator" />
+                </Grid>
+			</Border>
+		</DockPanel>
+	</Border>
+</Window>

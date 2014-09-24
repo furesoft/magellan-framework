@@ -1,0 +1,17 @@
+﻿<UserControl 
+    x:Class="Sample.Features.Details.DetailsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    d:DesignHeight="106" d:DesignWidth="576"
+    >
+    <Grid>
+        <Form Margin="5">
+            <Field For="{Binding Path=Person.Title}" />
+            <Field For="{Binding Path=Person.FirstName}" />
+            <Field For="{Binding Path=Person.LastName}" />
+            <Field For="{Binding Path=Person.IsOverdue}" />
+        </Form>
+    </Grid>
+</UserControl>

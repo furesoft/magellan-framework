@@ -1,0 +1,9 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:iPhone_Controls="clr-namespace:iPhone.Controls" x:Class="iPhone.Applications.Phone.Views.CallView"
+    Title="CallView" d:DesignWidth="258" d:DesignHeight="365">
+	<DockPanel>
+		<Button DockPanel.Dock="Bottom" Content="End" FontWeight="Bold" FontSize="18.667" Background="#FF681B1B" BorderBrush="#FF4F0000" Height="50" Command="NavigationCommands.BrowseBack"  Foreground="White"/>
+		<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" Text="Calling..." TextWrapping="Wrap"/>
+	</DockPanel>
+</Page>

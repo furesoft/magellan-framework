@@ -1,0 +1,117 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:magellan="http://xamlforge.com/magellan" 
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:Model="clr-namespace:Wizard.Model" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    x:Class="Wizard.Views.Wizard.SummaryPage" 
+    Title="Confirm"
+    mc:Ignorable="d" d:DesignWidth="515.396" d:DesignHeight="291.698"
+    TextOptions.TextFormattingMode="Display"
+    >
+    <Layout>
+        <Zone ZonePlaceHolderName="MainContent">
+            <StackPanel Margin="0,0,0,3">
+                <Label Margin="0,3,0,6" Content="Please confirm the account settings:" />
+
+                <WrapPanel Margin="0,3,0,3">
+                    <Label Width="100" Content="Full name:" />
+                    <Label Width="300" FontWeight="Bold" Content="{Binding FullName}" />
+                </WrapPanel>
+
+                <WrapPanel Margin="0,3,0,3">
+                    <Label Width="100" Content="Email address:" />
+                    <Label Width="300" FontWeight="Bold" Content="{Binding EmailAddress}" />
+                </WrapPanel>
+
+                <WrapPanel Margin="0,3,0,3">
+                    <Label Width="100" Content="Password:" />
+                    <Label Width="300" FontWeight="Bold" Content="********" />
+                </WrapPanel>
+
+                <StackPanel>
+                    
+                    <StackPanel.Resources>
+                        <DataTemplate DataType="{x:Type Model:ExchangeServerSettings}">
+
+                            <StackPanel>
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="Account Type:" />
+                                    <Label Width="300" FontWeight="Bold" Content="Microsoft Exchange" />
+                                </WrapPanel>
+
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="Server:" />
+                                    <Label Width="300" FontWeight="Bold" Content="{Binding Server}" />
+                                </WrapPanel>
+
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="" />
+                                    <CheckBox IsEnabled="False" IsChecked="{Binding CachedExchangeMode}" Content="Use Cached Exchange Mode"  />
+                                </WrapPanel>
+
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="Username:" />
+                                    <Label Width="300" FontWeight="Bold" Content="{Binding Username}" />
+                                </WrapPanel>
+
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="Security Mode:" />
+                                    <Label Width="300" FontWeight="Bold" Content="{Binding SecurityMode}" />
+                                </WrapPanel>
+                            </StackPanel>
+
+                        </DataTemplate>
+
+                        <DataTemplate DataType="{x:Type Model:PopServerSettings}">
+
+                            <StackPanel>
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="Account Type:" />
+                                    <Label Width="300" FontWeight="Bold" Content="POP3/SMTP" />
+                                </WrapPanel>
+
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="POP Server:" />
+                                    <Label Width="300" FontWeight="Bold" Content="{Binding IncomingMailServer}" />
+                                    <Label Width="40" Content="Port:" />
+                                    <Label Width="50" FontWeight="Bold" Content="{Binding IncomingMailServerPort}" />
+                                </WrapPanel>
+
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="SMTP Server:" />
+                                    <Label Width="300" FontWeight="Bold" Content="{Binding OutgoingMailServer}" />
+                                    <Label Width="40" Content="Port:" />
+                                    <Label Width="50" FontWeight="Bold" Content="{Binding OutgoingMailServerPort}" />
+                                </WrapPanel>
+
+                                <WrapPanel Margin="0,3,0,3">
+                                    <Label Width="100" Content="" />
+                                    <CheckBox IsEnabled="False" IsChecked="{Binding SecurePasswordAuthentication}" Content="Use Secure Password Authentication (SPA)"  />
+                                </WrapPanel>
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </StackPanel.Resources>
+                    <ContentPresenter Content="{Binding Server}" />
+                    
+                </StackPanel>
+
+            </StackPanel>
+        </Zone>
+
+        <Zone ZonePlaceHolderName="ForwardNavigation">
+            <Button Content="Finish" IsDefault="True">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <NavigateControllerAction Controller="Wizard" Action="Commit">
+                            <NavigateControllerAction.Parameters>
+                                <Parameter ParameterName="wizardState" Value="{Binding}" />
+                            </NavigateControllerAction.Parameters>
+                        </NavigateControllerAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+        </Zone>
+    </Layout>
+</Page>

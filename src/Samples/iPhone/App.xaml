@@ -1,0 +1,21 @@
+﻿<Application 
+    x:Class="iPhone.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+    <Application.Resources>
+         
+    	<ResourceDictionary>
+    		<ResourceDictionary.MergedDictionaries>
+    			<ResourceDictionary Source="Resources/Styles/Buttons.xaml"/>
+    			<ResourceDictionary Source="Resources/Styles/BusyIndicator.xaml"/>
+    			<ResourceDictionary Source="Resources/Styles/Borders.xaml"/>
+    			<ResourceDictionary Source="Resources/Styles/Frames.xaml"/>
+    			<ResourceDictionary Source="Resources/Styles/Pages.xaml"/>
+    			<ResourceDictionary Source="Resources/Styles/Tabs.xaml"/>
+    			<ResourceDictionary Source="Resources/Styles/PageTitles.xaml"/>
+    		</ResourceDictionary.MergedDictionaries>
+    	</ResourceDictionary>
+         
+    </Application.Resources>
+</Application>
